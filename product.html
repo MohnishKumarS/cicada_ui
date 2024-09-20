@@ -73,8 +73,8 @@
                                 </div>
                             </div>
                             <div class="product__actions">
-                                <button class="btn-main  w-50">Add to Cart</button>
-                                <!-- <button class="btn btn-secondary">Buy Now</button> -->
+                                <button class="btn-main product__btn">Add to Cart</button>
+                                <button class="btn-sec product__btn">Buy it Now</button>
                             </div>
 
                             <div class="product__desc">
@@ -220,16 +220,20 @@
 
 
         </main>
+
+        <div class="related-prod">
+           <div class="container">
+            <h2>You may also like</h2>
+           </div>
+        </div>
     </section>
+
+
 
 
     <style>
         .product {
             margin: 30px 0;
-
-            & .page--width {
-                max-width: 70rem !important;
-            }
 
             & .product__column-sticky {
                 position: sticky;
@@ -319,6 +323,12 @@
 
                 & .product__actions {
                     margin: 2rem 0;
+                    display: flex;
+                    column-gap: 7px;
+
+                    & .product__btn{
+                        width: 50%;
+                    }
                 }
 
             }

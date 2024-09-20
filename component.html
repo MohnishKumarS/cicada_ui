@@ -295,7 +295,145 @@
         </style>
 
 
+        <!-- modal  view cart -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewCartModal">
+            Launch demo modal
+        </button>
 
+        <!-- Modal -->
+        <div class="modal fade" id="viewCartModal"  tabindex="-1"
+            aria-labelledby="viewCartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="viewCartModalLabel">
+                            <svg class="icon icon-checkmark" aria-hidden="true" focusable="false"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"
+                                    fill="currentColor"></path>
+                            </svg> Item added to your cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                                <path
+                                    d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                                    fill="currentColor">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="product-info">
+                            <div class="product-view">
+                                <div class="product-media">
+                                    <img src="assets/image/p1.webp" class="img-fluid" alt="" loading="lazy" width="100"
+                                        height="100">
+                                </div>
+                                <div class="product-desc">
+                                    <p class="product-name">
+                                        Amaterasu Itachi Designed Sweatshirt</p>
+                                    <div class="product-size">Size: S</div>
+                                </div>
+                            </div>
+                            <div class="product-links">
+                                <a href="" class="btn-sec">View Cart (3)</a>
+                                <a href="" class="btn-main">Check out</a>
+                                <a href="" class="link--text text-center">Continue shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            /* modal css */
+            .modal {
+                .modal-content {
+                    background-color: #121212;
+                    /* border-color: #b2b2b2; */
+                    border-radius: 4px;
+                    color: #fff;
+                    box-shadow: 0 0 0 1px rgba(233, 233, 233, 0.171);
+                }
+
+                & .modal-header {
+                    border-bottom: none;
+                    padding: 1rem 1.5rem;
+
+                    & .modal-title {
+                        font-size: 14px;
+
+                        & .icon-checkmark {
+                            width: 0.9rem;
+                            margin-right: 0.5rem;
+                        }
+                    }
+
+                    .btn-close .icon-close path {
+                        fill: none;
+                        stroke: #e7e7e7;
+                        stroke-width: 2px;
+                    }
+
+                    .btn-close:hover .icon-close path {
+                        stroke: #b2b2b2;
+                        stroke-width: 3px;
+                    }
+
+                    .btn-close {
+                        font-size: 0.8rem;
+                        border-radius: 50%;
+                        line-height: 1px;
+                        background: none !important;
+                        opacity: 1;
+                    }
+                }
+
+                & .modal-body {
+                    padding: 1rem 2rem 2rem;
+
+                    & .product-info {
+                        & .product-view {
+                            display: flex;
+                            padding-bottom: 30px;
+
+                            & .product-media img {
+                                border-radius: 10px;
+                                width: 80px;
+                                object-fit: contain;
+                            }
+
+                            .product-desc {
+                                padding-left: 20px;
+
+                                & .product-name {
+                                    font-size: 15px;
+                                    margin-bottom: 8px;
+                                }
+
+                                & .product-size {
+                                    color: #b2b2b2;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        & .product-links {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            row-gap: 15px;
+                        }
+                    }
+                }
+
+
+            }
+        </style>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

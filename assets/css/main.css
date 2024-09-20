@@ -15,6 +15,9 @@ body {
 .container--tiny {
     max-width: 740px !important;
 }
+.page--width {
+    max-width: 960px !important;
+}
 
 @media only screen and (max-width:768px) {
     .container {
@@ -99,7 +102,7 @@ ul {
     align-items: center;
     background-clip: padding-box;
     background-color: #fff;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
     border-radius: 0;
     box-shadow: rgba(236, 236, 236, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
@@ -137,5 +140,47 @@ ul {
 .btn-main:active {
     background-color: #f1f1f1;
     box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+/* btn sec */
+.btn-sec {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: 10px 30px;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.btn-sec:hover,
+.btn-sec:focus {
+    box-shadow: rgba(253, 253, 253, 0.5) 0 0px 12px;
+}
+
+.btn-sec:hover {
+    transform: translateY(-1px);
+}
+
+.btn-sec:active {
     transform: translateY(0);
 }
