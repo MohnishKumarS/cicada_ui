@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    font-size: 15px;
     background-color: #121212 !important;
     color: #fff !important;
     font-family: "Assistant", sans-serif !important;
@@ -15,14 +16,52 @@ body {
 .container--tiny {
     max-width: 740px !important;
 }
-.page--width {
-    max-width: 960px !important;
-}
+
 
 @media only screen and (max-width:768px) {
     .container {
         padding: 0px 16px !important;
     }
+}
+
+@media only screen and (min-width:991px) {
+    .page--width {
+        max-width: 1100px !important;
+    }
+}
+
+.page--title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.page--head {
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+@media (max-width:991px) {
+    .page--head {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .sm-hide {
+        display: none !important;
+    }
+}
+
+@media (min-width:769px) {
+
+    .lg-hide {
+        display: none !important;
+    }
+}
+
+svg {
+    width: 1rem;
 }
 
 section {
@@ -40,12 +79,15 @@ ul {
 .link {
     color: #b2b2b2 !important;
     font-size: 14px;
+    transition: all 0.3s ease;
 }
-.link--hover:hover{
+
+.link--hover:hover {
     text-decoration: underline !important;
     text-underline-offset: .3rem;
-    color: #fff;
+    color: #fff !important;
 }
+
 .link--text {
     display: inline-block;
     color: #b2b2b2 !important;
@@ -60,41 +102,41 @@ ul {
     }
 }
 
-        /* common */
-        .form-control {
-            border-radius: 0;
-            border-color: #b2b2b2;
-            color: #b2b2b2 ;
-            background-color: transparent ;
-        }
+/* common */
+.form-control {
+    border-radius: 0;
+    border-color: #b2b2b2;
+    color: #b2b2b2;
+    background-color: transparent;
+}
 
-        .form-control:hover {
-            box-shadow: 0 0 0 1px #bdbdbd ;
+.form-control:hover {
+    box-shadow: 0 0 0 1px #bdbdbd;
 
-        }
+}
 
-        .form-control:focus {
-            border-color: #fff ;
-            box-shadow: 0 0 0 1px #fff ;
-            background-color: transparent;
-            color: #fff;
-        }
+.form-control:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #fff;
+    background-color: transparent;
+    color: #fff;
+}
 
-        label {
-            color: #b2b2b2;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
+label {
+    color: #b2b2b2;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
 
-        .form-floating>.form-control:focus~label {
-            color: #b2b2b2;
-            font-size: 13px;
-        }
+.form-floating>.form-control:focus~label {
+    color: #b2b2b2;
+    font-size: 13px;
+}
 
-        .form-floating>.form-control:focus~label::after {
-            background-color: transparent;
+.form-floating>.form-control:focus~label::after {
+    background-color: transparent;
 
-        }
+}
 
 /* btn */
 

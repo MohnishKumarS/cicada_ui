@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cicada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="ccd-nav">
+        <div class="container page--width">
+            <div class="ccd-nav__top">
+                <nav>
+                    <ul class="ccd-nav__items">
+                        <li class="ccd-nav__item">
+                            <a href="" class="ccd-nav__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="icon icon-hamburger" fill="none" viewBox="0 0 18 16">
+                                    <path
+                                        d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="" class="ccd-nav__link">
+                                <img src="assets/image/logo.avif" class="ccd-nav__brand" alt="">
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="" class="ccd-nav__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="icon icon-account" fill="none" viewBox="0 0 18 19">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="" class="ccd-nav__link">
+                                <svg class="icon icon-cart" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z">
+                                    </path>
+                                </svg>
+                            </a>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ccd-nav__bottom">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <style>
+        .ccd-nav {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #474747;
+            & .ccd-nav__top {
+                & .ccd-nav__items {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px 0;
+                    margin-bottom: 0;
+                    & .ccd-nav__item {
+
+                        & .ccd-nav__link {
+                            color: #fff;
+
+                            & svg {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                                vertical-align: middle;
+                            }
+
+                            & .icon-cart{
+                                width: 2.8rem;
+                                height: 2.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .ccd-nav__bottom {
+
+                & .navbar-nav {
+                    font-size: 14px;
+                    color: #b2b2b2;
+                    justify-content: center;
+                    flex-direction: row;
+                    column-gap: 25px;
+                }
+            }
+        }
+    </style>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

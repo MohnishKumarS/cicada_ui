@@ -12,46 +12,67 @@
 
 <body>
     <div class="my-5">
-        <footer class="footer">
-            <div class="footer-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-12 ps-4 ps-sm-0">
-                            <h2 class="footer-block_head">Quick links</h2>
-                            <ul class="footer-block_content">
-                                <li><a href="" class="link--text">Search</a></li>
-                                <li><a href="" class="link--text">Search</a></li>
-                                <li><a href="" class="link--text">Search</a></li>
-                                <li><a href="" class="link--text">Search</a></li>
-                                <li><a href="" class="link--text">Search</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-12 ps-4 ps-sm-0">
-                            <h2 class="footer-block_head">Support</h2>
-                            <ul class="footer-block_content">
-                                <li><a href="" class="link--text">support@cicada.com</a></li>
-                                <li><a href="" class="link--text">Search</a></li>
-                                <li>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        <footer class="ccd-footer">
+          <div class="container page--width">
+            <div class="footer-top">
+                <h2 class="footer-top__head page--head text-center mb-3">What's Cicada</h2>
+                <div class="footer-top__info">
+                    <p class="footer-top__desc">"cicada" is a streetwear-based fashion house, born from bold creativity and a passion for pushing limits.
+                        We are rewriting the rules of streetwear. Embrace the fusion of construction, artistry, and fearless attitude in every stitch.
+                        </p>
+                        <p class="footer-top__desc">
+                            Specializing in gender-fluid, men's, and women's ready-to-wear apparel, "cicada" pushes boundaries with its deconstructive aesthetic and experimental designs.
+                        Join us as we redefine Indian street style with a nod to art and culture. Step into "cicada’s" world where crossing boundaries is celebrated, not feared.
+                        </p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-bootom_cr">© 2024, The Cicada Store</p>
+            <div class="footer-base">
+                <div class="footer-block">
+                        <div class="row mx-0">
+                            <div class="col-sm-6 col-12 ps-4 ps-sm-0">
+                                <h2 class="footer-block_head">Quick links</h2>
+                                <ul class="footer-block_content">
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-12 ps-4 ps-sm-0">
+                                <h2 class="footer-block_head">Support</h2>
+                                <ul class="footer-block_content">
+                                    <li><a href="" class="link link--hover">support@cicada.com</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                    <li>
+    
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-bootom_cr">© 2024, The Cicada Store</p>
+                </div>
             </div>
+          </div>
         </footer>
     </div>
 
     <style>
-        .footer {
+        .ccd-footer{
+            & .footer-top{
+                padding-bottom: 10px;
+                & .footer-top__desc{
+                    color: #b2b2b2;
+                }
+            }
+            .footer-base {
             font-size: 14px;
             color: #b2b2b2;
 
             & .footer-block {
-                padding: 30px 0;
+                padding: 30px 0 !important;
                 border-top: 1px solid #3a3a3a;
                 border-bottom: 1px solid #3a3a3a;
 
@@ -67,16 +88,6 @@
 
                     & li {
                         padding-bottom: 12px;
-
-                        & .link--text {
-                            color: #b2b2b2;
-
-                            &:hover {
-                                color: #fff;
-                                text-decoration: underline !important;
-                                text-underline-offset: .3rem;
-                            }
-                        }
                     }
                 }
             }
@@ -88,6 +99,8 @@
                 letter-spacing: 1px;
             }
         }
+        }
+       
     </style>
 </body>
 
