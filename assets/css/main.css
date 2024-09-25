@@ -47,18 +47,7 @@ body {
     }
 }
 
-@media (max-width:768px) {
-    .sm-hide {
-        display: none !important;
-    }
-}
 
-@media (min-width:769px) {
-
-    .lg-hide {
-        display: none !important;
-    }
-}
 
 svg {
     width: 1rem;
@@ -75,6 +64,22 @@ a {
 
 ul {
     list-style: none;
+}
+
+@media (max-width:768px) {
+    .sm-hide {
+        display: none !important;
+    }
+    section{
+        padding-bottom: 50px;
+    }
+}
+
+@media (min-width:769px) {
+
+    .lg-hide {
+        display: none !important;
+    }
 }
 
 .link {

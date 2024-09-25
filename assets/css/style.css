@@ -1,4 +1,4 @@
-  /* product cards */
+  /* --- product cards --- */
   .ccd-card {
     & .ccd-card__media {
         width: 100%;
@@ -71,9 +71,10 @@
 }
 
  /* product collections  */
-.ccd-product-cls .ccd-card {
+.ccd-product-shop .ccd-card {
+ 
     .ccd-card__media {
-        height: auto;
+        height: 300px;
         border-radius: 0;
     }
 
@@ -97,9 +98,64 @@
                 transition: transform 0.2s ease;
             }
         }
+        
     }
 
     &:hover .icon-arrow path{
         transform: translate(0px)
+    }
+    @media (min-width:991px){
+        .ccd-card__media {
+            height: 500px;
+        }
+    }
+}
+
+
+ /* --- footer --- */
+ .ccd-footer {
+    & .footer-top {
+        padding-bottom: 10px;
+
+        & .footer-top__desc {
+            color: #b2b2b2;
+        }
+    }
+
+    .footer-base {
+        font-size: 14px;
+        color: #b2b2b2;
+
+        & .footer-block {
+            padding: 30px 0 !important;
+            border-top: 1px solid #3a3a3a;
+            border-bottom: 1px solid #3a3a3a;
+
+            & .footer-block_head {
+                font-size: 16px;
+                text-transform: capitalize;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            & .footer-block_content {
+                padding-left: 0;
+                margin-bottom: 0;
+
+                & li {
+                    padding-bottom: 12px;
+                }
+                & li:last-child{
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        & .footer-bottom {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
     }
 }
