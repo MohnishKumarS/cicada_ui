@@ -70,6 +70,7 @@ section {
 
 a {
     text-decoration: none !important;
+    color: #fff;
 }
 
 ul {
@@ -136,6 +137,75 @@ label {
 .form-floating>.form-control:focus~label::after {
     background-color: transparent;
 
+}
+
+/* offcanvas */
+.offcanvas {
+    font-size: 15px;
+    background-color: #121212 !important;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgb(44, 44, 44);
+}
+
+.offcanvas-header .btn-close {
+    border-radius: 50%;
+    line-height: 1px;
+}
+
+.offcanvas-header .btn-close svg path {
+    fill: rgb(255, 255, 255);
+}
+
+.btn-close {
+    background: none !important;
+    background-color: #4b4b4b !important;
+}
+
+.offcanvas-title {
+    font-size: 15px;
+    text-transform: capitalize;
+
+}
+
+.offcanvas-title span {
+    font-size: 13px;
+    color: #b2b2b2;
+}
+
+.offcanvas-body__head {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-check {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #b2b2b2;
+}
+
+.offcanvas-footer {
+    border-top: 1px solid rgb(44, 44, 44);
+    padding: 1.5rem 1rem;
+}
+
+/* radio check */
+.form-check-input {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.form-check-input:checked {
+    background-color: black;
+    border-color: black;
+    width: 1rem;
+    height: 1rem;
+}
+
+.form-check-input:focus {
+    border-color: black;
+    box-shadow: 0 0 0 .25rem rgb(0 0 0 / 25%);
 }
 
 /* btn */
