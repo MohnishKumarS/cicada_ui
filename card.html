@@ -16,6 +16,90 @@
 
 <body>
 
+    <div class="ccd--empty">
+        <div class="ccd-empty__icon">
+            <img src="assets/image/cicada.webp" class="img-fluid ccd-empty__logo" width="100" height="100"
+                alt="cicada-logo">
+        </div>
+        <h3 class="ccd-empty__title page--head">Your cart is currently empty.</h3>
+        <div class="ccd-empty__link">
+            <a href="" class="btn-main">Return to Shop</a>
+        </div>
+    </div>
+
+    <style>
+        /* empty block */
+        .ccd--empty {
+            padding: 50px 0;
+            text-align: center;
+
+            & .ccd-empty__icon {
+                position: relative;
+                width: 130px;
+                height: 130px;
+                background-color: #fff;
+                border-radius: 50%;
+                margin: auto;
+                overflow: hidden;
+
+                & .ccd-empty__logo {
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: 30px;
+                    /* Center vertically within the 130px circle */
+                    left: 30px;
+                    /* object-fit: contain; */
+                    /* animation: zoomInOut 4s ease-in-out infinite; */
+                    animation: flyAround 8s ease-in-out infinite;
+                }
+            }
+        }
+
+        @keyframes flyAround {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(20px, -10px) rotate(15deg);
+                /* Top-right */
+            }
+
+            50% {
+                transform: translate(40px, 20px) rotate(-10deg);
+                /* Bottom-right */
+            }
+
+            75% {
+                transform: translate(20px, 40px) rotate(10deg);
+                /* Bottom-left */
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+                /* Back to original */
+            }
+        }
+
+        /* @keyframes zoomInOut {
+            0% {
+                transform: scale(0.8);
+                rotate: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                rotate: 3deg;
+            }
+            100% {
+                transform: scale(0.8);
+                rotate: 0deg;
+            }
+        } */
+    </style>
+
+
+
     <section>
         <div class="container page--width">
             <h2 class="page--title">Hip-Hop Drop</h2>

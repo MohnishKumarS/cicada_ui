@@ -8,15 +8,113 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body>
+
+    <!-- cdd preloader -->
+    <div id="preloader">
+        <img src="assets/image/cicada.webp" alt="loading-logo" class="preload-logo">
+    </div>
+
+    <!-- ccd header -->
+    <header class="ccd-nav">
+        <div class="container page--width">
+            <div class="ccd-nav__top">
+                <nav>
+                    <ul class="ccd-nav__items">
+                        <li class="ccd-nav__item">
+                            <a class="ccd-nav__link menu--link" data-bs-toggle="offcanvas" href="#header-menu--slider">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="menu--icon icon icon-hamburger" fill="none" viewBox="0 0 18 16">
+                                    <path
+                                        d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="index.html" class="ccd-nav__link">
+                                <img src="assets/image/logo.avif" class="ccd-nav__brand" alt="">
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="account.html" class="ccd-nav__link menu--link">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="menu--icon icon icon-account" fill="none" viewBox="0 0 18 19">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="cart.html" class="ccd-nav__link menu--link position-relative">
+                                <svg class="menu--icon icon icon-cart" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z">
+                                    </path>
+                                </svg>
+                                <div class="ccd-cart__count">
+                                    <span class="ccd-cart__num">3</span>
+                                </div>
+                            </a>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ccd-nav__bottom sm-hide">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item link link--hover" href="#">Action</a></li>
+                            <li><a class="dropdown-item link link--hover" href="#">Another action</a></li>
+                            <li><a class="dropdown-item link link--hover" href="#">Something else</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="ccd--empty">
+        <div class="ccd-empty__icon">
+            <img src="assets/image/cicada.webp" class="img-fluid ccd-empty__logo" width="100" height="100"
+                alt="cicada-logo">
+        </div>
+        <h3 class="ccd-empty__title page--head">Your cart is currently empty.</h3>
+        <div class="ccd-empty__link">
+            <a href="collections.html" class="btn-main">Return to Shop</a>
+        </div>
+    </div>
+    <!-- cart page -->
     <section>
         <div class="cart-wrapper">
             <div class="container page--width">
-                <div class="cart">
+                <div class="ccd--cart">
                     <div class="cart__title-wrap ">
-                        <h1>Your cart</h1>
+                        <h1 class="page--head">Your cart</h1>
                         <a href="" class="link--text">Continue shopping</a>
                     </div>
                     <table class="cart-table">
@@ -171,127 +269,154 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="cart__total-wrap">
+                        <div class="cart__totals">
+                            <h3 class="cart__totals-txt">Estimated total :</h3>
+                            <div class="cart__total-price">Rs. 3,446</div>
+                        </div>
+                        <div class="cart__btn-wrap  mt-4">
+                            <a href="#" class="btn-sec">Checkout now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- featured product -->
+        <div class="related-prod pt-md-5">
+            <div class="container page--width">
+                <h2 class="page--title">
+                    Featured collection
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-6 col-md-4">
+                        <div class="ccd-card">
+                            <div class="ccd-card__media">
+                                <img src="assets/image/b8.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
+                            </div>
+                            <div class="ccd-card__content">
+                                <h4 class="ccd-card__title">
+                                    <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                </h4>
+                                <p class="ccd-card__info">
+                                    <span class="ccd-card__org">Rs 999</span>
+                                    <span class="ccd-card__sell">Rs 599</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-md-4">
+                        <div class="ccd-card">
+                            <div class="ccd-card__media">
+                                <img src="assets/image/b2.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
+                            </div>
+                            <div class="ccd-card__content">
+                                <h4 class="ccd-card__title">
+                                    <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                </h4>
+                                <p class="ccd-card__info">
+                                    <span class="ccd-card__org">Rs 999</span>
+                                    <span class="ccd-card__sell">Rs 599</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-md-4">
+                        <div class="ccd-card">
+                            <div class="ccd-card__media">
+                                <img src="assets/image/b3.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
+                            </div>
+                            <div class="ccd-card__content">
+                                <h4 class="ccd-card__title">
+                                    <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                </h4>
+                                <p class="ccd-card__info">
+                                    <span class="ccd-card__org">Rs 999</span>
+                                    <span class="ccd-card__sell">Rs 599</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 col-md-4">
+                        <div class="ccd-card">
+                            <div class="ccd-card__media">
+                                <img src="assets/image/b7.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
+                            </div>
+                            <div class="ccd-card__content">
+                                <h4 class="ccd-card__title">
+                                    <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                </h4>
+                                <p class="ccd-card__info">
+                                    <span class="ccd-card__org">Rs 999</span>
+                                    <span class="ccd-card__sell">Rs 599</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ccd-card__link text-center">
+                    <a href="#" class="btn-main">View all</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
-        .cart {
-            margin: 30px 0;
 
-            & .cart__title-wrap {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-bottom: 30px;
-            }
-
-            & .cart-table {
-                display: block;
-                width: 100%;
-
-                & .cart-table__head th:first-child {
-                    width: 50%;
-                    padding-left: 0;
-
-                }
-
-                & .cart-table__head th {
-                    padding-left: 1rem;
-                    font-size: 10px;
-                    color: #b2b2b2;
-                    text-transform: uppercase;
-                    text-align: left;
-                    padding-bottom: 15px;
-                    border-bottom: 1px solid rgb(41, 41, 41);
-
-                }
-
-                & .cart-item {
-
-                    & td {
-                        vertical-align: top;
-                        padding: 30px 0;
-                        padding-left: 1rem;
-                        border-bottom: 1px solid rgb(41, 41, 41);
-                    }
-
-                    & .cart-item__media {
-                        width: 110px;
-                        padding-left: 0;
-
-                        & .cart-item__img {
-                            border-radius: 10px;
-                            width: 120px;
-                            height: auto;
-                            object-fit: cover;
-                        }
-                    }
-
-                    & .cart-item__info {
-                        color: #b2b2b2;
-                        font-size: 14px;
-
-                        & .cart-item__name .link {
-                            color: #fff !important;
-                        }
-
-                        & .cart-item__price {
-                            padding: 5px 0;
-                        }
-                    }
-
-                    & .cart-item__actions-wrapper {
-                        display: flex;
-                        align-items: center;
-                        column-gap: 40px;
-
-                        & .product__remove .icon-remove {
-                            width: 1.1rem;
-                            cursor: pointer;
-                        }
-                    }
-                }
-
-            }
-        }
+    <!-- header slider menu -->
+    <div class="offcanvas offcanvas-start ccd-nav--menu" tabindex="-1" id="header-menu--slider">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title ccd-menu__title">
+                <div class="ccd-menu__brand">
+                    <img src="assets/image/cicada.webp" class="img-fluid ccd-menu__logo" width="100" height="100"
+                        alt="">
+                </div>
+                <div class="ccd-menu__head">
+                    Cicada
+                </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close"
+                    fill="none" viewBox="0 0 18 17">
+                    <path
+                        d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                        fill="currentColor">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="ccd-menu__items">
+                <li class="ccd-menu__item">
+                    <a href="index.html" class="ccd-menu__link active">Home</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="collections.html" class="ccd-menu__link">Shop</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="products.html" class="ccd-menu__link">All Product</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="product.html" class="ccd-menu__link">Product</a>
+                </li>
 
 
-    </style>
+            </ul>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="ccd-menu__bottom">
+                <a href="login.html" class="ccd-menu__bottom-link menu--link">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                        class="menu--icon icon-account" fill="none" viewBox="0 0 18 19">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z"
+                            fill="currentColor">
+                        </path>
+                    </svg> Login
+                </a>
+            </div>
+        </div>
+    </div>
 
-    <style>
-        /* quantity  */
-        .input-group-lg>.input-group-text {
-            background-color: transparent;
-            color: #b2b2b2;
-        }
-
-        .input-group-text {
-            border-radius: 0 !important;
-            border-color: #b2b2b2;
-            cursor: pointer;
-
-        }
-
-        .input-group .form-control {
-            border-left-color: #121212;
-            border-right-color: #121212;
-            color: #fff;
-            font-size: 15px;
-        }
-
-        .input-group .form-control:hover {
-            box-shadow: none;
-        }
-
-        .input-group .form-control:focus {
-            border-color: #b2b2b2;
-            border-left-color: #121212;
-            border-right-color: #121212;
-            box-shadow: none;
-        }
-    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

@@ -12,9 +12,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body>
+    <!-- cdd preloader -->
+    <div id="preloader">
+        <img src="assets/image/cicada.webp" alt="loading-logo" class="preload-logo">
+    </div>
+
+    <!-- ccd header -->
     <header class="ccd-nav">
         <div class="container page--width">
             <div class="ccd-nav__top">
@@ -32,12 +40,12 @@
                             </a>
                         </li>
                         <li class="ccd-nav__item">
-                            <a href="" class="ccd-nav__link">
+                            <a href="index.html" class="ccd-nav__link">
                                 <img src="assets/image/logo.avif" class="ccd-nav__brand" alt="">
                             </a>
                         </li>
                         <li class="ccd-nav__item">
-                            <a href="" class="ccd-nav__link menu--link">
+                            <a href="account.html" class="ccd-nav__link menu--link">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                                     class="menu--icon icon icon-account" fill="none" viewBox="0 0 18 19">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -46,7 +54,7 @@
                                     </path>
                                 </svg>
                             </a>
-                            <a href="" class="ccd-nav__link menu--link position-relative">
+                            <a href="cart.html" class="ccd-nav__link menu--link position-relative">
                                 <svg class="menu--icon icon icon-cart" aria-hidden="true" focusable="false"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -93,115 +101,6 @@
     </header>
 
 
-
-
-    <style>
-        /* header navbar  */
-        .ccd-nav {
-            padding-bottom: 15px;
-            border-bottom: 1px solid #474747;
-
-            & .ccd-nav__top {
-                & .ccd-nav__items {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 20px 0;
-                    margin-bottom: 0;
-
-                    & .ccd-nav__item {
-
-                        & .ccd-nav__link {
-                            color: #fff;
-
-                            & .icon-cart {
-                                margin-top: 4px;
-                                width: 2.7rem;
-                                height: 2.7rem;
-                            }
-
-                            & .ccd-cart__count {
-                                position: absolute;
-                                bottom: -8px;
-                                right: 3px;
-                                width: 15px;
-                                height: 15px;
-                                border-radius: 50%;
-                                background-color: #fff;
-
-                                & .ccd-cart__num {
-                                    display: block;
-                                    color: #000;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    line-height: 15px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            & .ccd-nav__bottom {
-
-                & .navbar-nav {
-                    font-size: 14px;
-                    color: #b2b2b2;
-                    justify-content: center;
-                    flex-direction: row;
-                    column-gap: 25px;
-                }
-            }
-
-            @media (max-width:768px) {
-                & {
-                    padding-bottom: 0;
-                }
-
-                & .ccd-nav__top .ccd-nav__items {
-                    padding: 14px 0;
-                }
-
-            }
-        }
-
-        .menu--link {
-            transform: scale(1);
-            transition: all 0.2s ease;
-        }
-
-        .menu--link:hover .menu--icon {
-            transform: scale(1.07);
-        }
-
-        .menu--icon {
-            width: 1.4rem;
-            height: 1.4rem;
-            vertical-align: middle;
-        }
-
-        /* dropdown */
-        .dropdown-menu {
-            background-color: #121212;
-            border: 1px solid #474747;
-            border-radius: 0;
-
-            & .dropdown-item {
-                color: #fff;
-                padding: 5px 20px;
-
-                &:hover {
-                    background-color: transparent;
-                }
-            }
-        }
-
-        .dropdown-toggle.show::after {
-            rotate: 180deg;
-        }
-    </style>
-
     <!-- hero banner -->
     <section>
         <div class="ccd-banners">
@@ -242,8 +141,8 @@
         </div>
     </section>
 
-       <!-- slider -->
-       <section>
+    <!-- slider products -->
+    <section>
         <div class="container page--width">
             <h2 class="page--title">Top Featured Drop</h2>
             <div class="ccd-product-slider">
@@ -253,7 +152,58 @@
                         <div class="swiper-slide">
                             <div class="ccd-card">
                                 <div class="ccd-card__media">
-                                    <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img"
+                                    <img src="assets/image/b2.jpg" class="ccd-card__img" alt="product-img"
+                                        loading="lazy">
+                                </div>
+                                <div class="ccd-card__content">
+                                    <h4 class="ccd-card__title">
+                                        <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                    </h4>
+                                    <p class="ccd-card__info">
+                                        <span class="ccd-card__org">Rs 999</span>
+                                        <span class="ccd-card__sell">Rs 599</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccd-card">
+                                <div class="ccd-card__media">
+                                    <img src="assets/image/b4.jpg" class="ccd-card__img" alt="product-img"
+                                        loading="lazy">
+                                </div>
+                                <div class="ccd-card__content">
+                                    <h4 class="ccd-card__title">
+                                        <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                    </h4>
+                                    <p class="ccd-card__info">
+                                        <span class="ccd-card__org">Rs 999</span>
+                                        <span class="ccd-card__sell">Rs 599</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccd-card">
+                                <div class="ccd-card__media">
+                                    <img src="assets/image/b3.jpg" class="ccd-card__img" alt="product-img"
+                                        loading="lazy">
+                                </div>
+                                <div class="ccd-card__content">
+                                    <h4 class="ccd-card__title">
+                                        <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
+                                    </h4>
+                                    <p class="ccd-card__info">
+                                        <span class="ccd-card__org">Rs 999</span>
+                                        <span class="ccd-card__sell">Rs 599</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ccd-card">
+                                <div class="ccd-card__media">
+                                    <img src="assets/image/b2.jpg" class="ccd-card__img" alt="product-img"
                                         loading="lazy">
                                 </div>
                                 <div class="ccd-card__content">
@@ -287,7 +237,7 @@
                         <div class="swiper-slide">
                             <div class="ccd-card">
                                 <div class="ccd-card__media">
-                                    <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img"
+                                    <img src="assets/image/b5.jpg" class="ccd-card__img" alt="product-img"
                                         loading="lazy">
                                 </div>
                                 <div class="ccd-card__content">
@@ -304,24 +254,7 @@
                         <div class="swiper-slide">
                             <div class="ccd-card">
                                 <div class="ccd-card__media">
-                                    <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img"
-                                        loading="lazy">
-                                </div>
-                                <div class="ccd-card__content">
-                                    <h4 class="ccd-card__title">
-                                        <a href="" class="link link--hover">ASAP Rocky Designed Oversized Tee</a>
-                                    </h4>
-                                    <p class="ccd-card__info">
-                                        <span class="ccd-card__org">Rs 999</span>
-                                        <span class="ccd-card__sell">Rs 599</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ccd-card">
-                                <div class="ccd-card__media">
-                                    <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img"
+                                    <img src="assets/image/b8.jpg" class="ccd-card__img" alt="product-img"
                                         loading="lazy">
                                 </div>
                                 <div class="ccd-card__content">
@@ -364,6 +297,7 @@
         </div>
     </section>
 
+    <!-- featured products -->
     <section>
         <div class="container page--width">
             <h2 class="page--title">Hip-Hop Drop</h2>
@@ -371,7 +305,7 @@
                 <div class="col-lg-3 col-6 col-md-4">
                     <div class="ccd-card">
                         <div class="ccd-card__media">
-                            <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img" loading="lazy">
+                            <img src="assets/image/b2.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
                         </div>
                         <div class="ccd-card__content">
                             <h4 class="ccd-card__title">
@@ -387,7 +321,7 @@
                 <div class="col-lg-3 col-6 col-md-4">
                     <div class="ccd-card">
                         <div class="ccd-card__media">
-                            <img src="assets/image/p4.webp" class="ccd-card__img" alt="product-img" loading="lazy">
+                            <img src="assets/image/b7.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
                         </div>
                         <div class="ccd-card__content">
                             <h4 class="ccd-card__title">
@@ -403,7 +337,7 @@
                 <div class="col-lg-3 col-6 col-md-4">
                     <div class="ccd-card">
                         <div class="ccd-card__media">
-                            <img src="assets/image/p1.webp" class="ccd-card__img" alt="product-img" loading="lazy">
+                            <img src="assets/image/b8.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
                         </div>
                         <div class="ccd-card__content">
                             <h4 class="ccd-card__title">
@@ -419,7 +353,7 @@
                 <div class="col-lg-3 col-6 col-md-4">
                     <div class="ccd-card">
                         <div class="ccd-card__media">
-                            <img src="assets/image/p4.webp" class="ccd-card__img" alt="product-img" loading="lazy">
+                            <img src="assets/image/b3.jpg" class="ccd-card__img" alt="product-img" loading="lazy">
                         </div>
                         <div class="ccd-card__content">
                             <h4 class="ccd-card__title">
@@ -438,53 +372,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        .ccd-banners {
-            & .ccd-banner__mob {
-                & .swiper-pagination {
-                    position: initial !important;
-                    padding: 15px 0;
-                }
-
-                & .swiper-pagination-bullet {
-                    background: #6b6b6b !important;
-                }
-
-                & .swiper-pagination-bullet-active {
-                    background: #fff !important;
-                }
-
-                .product__media-pic {
-                    width: 100%;
-                    height: auto;
-                    max-height: 500px;
-                    overflow: hidden;
-                    position: relative;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-
-                }
-            }
-
-            & .ccd-banner__desk {
-                & .ccd-banner__slide {
-                    width: 100%;
-                    height: 400px;
-
-                    & .ccd-banner__img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-    </style>
 
     <script>
         const swiperBanner = new Swiper('#banner__swiper-mob', {
@@ -517,48 +404,48 @@
         });
     </script>
 
-<script>
-    const swiper = new Swiper('#productSwiper', {
-        "autoplay": {
-            "delay": 5000
-        },
-        "slidesPerView": 4,
-        "slidesPerGroup": 4,
-        "effect": "none",
-        "loop": false,
-        "pagination": {
-            "el": '.swiper-pagination',
-            "clickable": true,
-        },
-        "breakpoints": {
-            "320": {
-                "slidesPerView": 2,
-                "slidesPerGroup": 1,
-                "spaceBetween": 10
+    <script>
+        const swiper = new Swiper('#productSwiper', {
+            "autoplay": {
+                "delay": 5000
             },
-            "768": {
-                "slidesPerView": 3,
-                "slidesPerGroup": 1,
-                "spaceBetween": 10
+            "slidesPerView": 4,
+            "slidesPerGroup": 4,
+            "effect": "none",
+            "loop": false,
+            "pagination": {
+                "el": '.swiper-pagination',
+                "clickable": true,
             },
-            "992": {
-                "slidesPerView": 4,
-                "slidesPerGroup": 1,
-                "spaceBetween": 24,
+            "breakpoints": {
+                "320": {
+                    "slidesPerView": 2,
+                    "slidesPerGroup": 1,
+                    "spaceBetween": 10
+                },
+                "768": {
+                    "slidesPerView": 3,
+                    "slidesPerGroup": 1,
+                    "spaceBetween": 10
+                },
+                "992": {
+                    "slidesPerView": 4,
+                    "slidesPerGroup": 1,
+                    "spaceBetween": 24,
+                },
+                // "1200": {
+                //     "slidesPerView": 4,
+                //     "slidesPerGroup": 1,
+                //     "spaceBetween": 60,
+                //     "pagination": false
+                // }
             },
-            // "1200": {
-            //     "slidesPerView": 4,
-            //     "slidesPerGroup": 1,
-            //     "spaceBetween": 60,
-            //     "pagination": false
-            // }
-        },
-        grabCursor: true,
-    });
-</script>
+            grabCursor: true,
+        });
+    </script>
 
 
-    <!-- header menu slider -->
+    <!-- header slider menu -->
     <div class="offcanvas offcanvas-start ccd-nav--menu" tabindex="-1" id="header-menu--slider">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title ccd-menu__title">
@@ -583,26 +470,24 @@
         <div class="offcanvas-body p-0">
             <ul class="ccd-menu__items">
                 <li class="ccd-menu__item">
-                    <a href="" class="ccd-menu__link active">Home</a>
+                    <a href="index.html" class="ccd-menu__link active">Home</a>
                 </li>
                 <li class="ccd-menu__item">
-                    <a href="" class="ccd-menu__link">Shop</a>
+                    <a href="collections.html" class="ccd-menu__link">Shop</a>
                 </li>
                 <li class="ccd-menu__item">
-                    <a href="" class="ccd-menu__link">All Product</a>
+                    <a href="products.html" class="ccd-menu__link">All Product</a>
                 </li>
                 <li class="ccd-menu__item">
-                    <a href="" class="ccd-menu__link">Home</a>
+                    <a href="product.html" class="ccd-menu__link">Product</a>
                 </li>
-                <li class="ccd-menu__item">
-                    <a href="" class="ccd-menu__link">Home</a>
-                </li>
+
 
             </ul>
         </div>
         <div class="offcanvas-footer">
             <div class="ccd-menu__bottom">
-                <a href="" class="ccd-menu__bottom-link menu--link">
+                <a href="login.html" class="ccd-menu__bottom-link menu--link">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                         class="menu--icon icon-account" fill="none" viewBox="0 0 18 19">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -616,127 +501,74 @@
     </div>
 
 
-    <style>
-        /* slider header menu */
-        .ccd-nav--menu {
-            .ccd-menu__title {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                .ccd-menu__brand {
-                    width: 50px;
-                    height: 50px;
-                    background-color: #fff;
-                    border-radius: 50%;
-
-                    & .ccd-menu__logo {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-
-                    }
-                }
-
-                & .ccd-menu__head {
-                    color: #fff;
-                    font-size: 1rem;
-                }
-            }
-
-            .offcanvas-body {
-                & .ccd-menu__items {
-                    padding-left: 0;
-                    margin-top: 20px;
-
-                    & .ccd-menu__item {
-                        & .ccd-menu__link {
-                            display: block;
-                            padding: 12px 30px;
-                            color: #fff;
-                            font-size: 1rem;
-                            transition: all 0.2s ease;
-
-                            &:hover {
-                                background-color: #292626;
-                            }
-
-                            &.active {
-                                background-color: #292626;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .offcanvas-footer {
-                background-color: #292626;
-                padding-left: 30px;
-
-                & .ccd-menu__bottom-link {
-                    display: flex;
-                    gap: 10px;
-                    font-size: 1rem;
-                }
-            }
-        }
-    </style>
-
-
-<footer class="ccd-footer">
-    <div class="">
-        <div class="footer-top">
-            <h2 class="footer-top__head page--head text-center mb-3">What's Cicada</h2>
-            <div class="container page--width">
-                <div class="footer-top__info">
-                    <p class="footer-top__desc">"cicada" is a streetwear-based fashion house, born from bold
-                        creativity and a passion for pushing limits.
-                        We are rewriting the rules of streetwear. Embrace the fusion of construction, artistry,
-                        and
-                        fearless attitude in every stitch.
-                    </p>
-                    <p class="footer-top__desc">
-                        Specializing in gender-fluid, men's, and women's ready-to-wear apparel, "cicada" pushes
-                        boundaries with its deconstructive aesthetic and experimental designs.
-                        Join us as we redefine Indian street style with a nod to art and culture. Step into
-                        "cicada’s" world where crossing boundaries is celebrated, not feared.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-base">
-            <div class="footer-block">
+    <!-- ccd footer -->
+    <footer class="ccd-footer">
+        <div class="">
+            <div class="footer-top">
+                <h2 class="footer-top__head page--head text-center mb-3">What's Cicada</h2>
                 <div class="container page--width">
-                    <div class="row mx-0">
-                        <div class="col-sm-6 col-12 ps-4 ps-sm-0">
-                            <h2 class="footer-block_head">Quick links</h2>
-                            <ul class="footer-block_content">
-                                <li><a href="" class="link link--hover">Search</a></li>
-                                <li><a href="" class="link link--hover">Search</a></li>
-                                <li><a href="" class="link link--hover">Search</a></li>
-                                <li><a href="" class="link link--hover">Search</a></li>
-                                <li><a href="" class="link link--hover">Search</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-12 ps-4 ps-sm-0 mt-3 mt-sm-0">
-                            <h2 class="footer-block_head">Support</h2>
-                            <ul class="footer-block_content">
-                                <li><a href="" class="link link--hover">support@cicada.com</a></li>
-                                <li><a href="" class="link link--hover">Search</a></li>
-                                <li>
-
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="footer-top__info">
+                        <p class="footer-top__desc">"cicada" is a streetwear-based fashion house, born from bold
+                            creativity and a passion for pushing limits.
+                            We are rewriting the rules of streetwear. Embrace the fusion of construction, artistry,
+                            and
+                            fearless attitude in every stitch.
+                        </p>
+                        <p class="footer-top__desc">
+                            Specializing in gender-fluid, men's, and women's ready-to-wear apparel, "cicada" pushes
+                            boundaries with its deconstructive aesthetic and experimental designs.
+                            Join us as we redefine Indian street style with a nod to art and culture. Step into
+                            "cicada’s" world where crossing boundaries is celebrated, not feared.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-bootom_cr mb-0">© 2024, The Cicada Store</p>
+            <div class="footer-base">
+                <div class="footer-block">
+                    <div class="container page--width">
+                        <div class="row mx-0">
+                            <div class="col-lg-6 col-12 ps-4 ps-sm-0">
+                                <h2 class="footer-block_head text-center">
+                                    <img src="assets/image/logo.avif" alt="">
+                                </h2>
+                                <ul class="footer-block_content">
+                                    <p>"cicada" is a streetwear-based fashion house, born from bold creativity and a
+                                        passion for pushing limits. We are rewriting the rules of streetwear. Embrace
+                                        the fusion of construction, artistry, and fearless attitude in every stitch.</p>
+                                </ul>
+                            </div>
+                            <div class="col-6  col-lg-3 ps-4 ps-sm-0 mt-3 mt-sm-0 ps-lg-4">
+                                <h2 class="footer-block_head">Quick links</h2>
+                                <ul class="footer-block_content">
+                                    <li><a href="" class="link link--hover">Shop</a></li>
+                                    <li><a href="" class="link link--hover">Products</a></li>
+                                    <li><a href="" class="link link--hover">Home</a></li>
+                                    <li><a href="" class="link link--hover">Login</a></li>
+                                    <li><a href="" class="link link--hover">Search</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6  col-lg-3 ps-4 ps-sm-0 mt-3 mt-sm-0 ">
+                                <h2 class="footer-block_head">More Info</h2>
+                                <ul class="footer-block_content">
+                                    <li><a href="" class="link link--hover">support@cicada.com</a></li>
+                                    <li><a href="" class="link link--hover">91+ 9123213123</a></li>
+                                    <li><a href="policy.html" class="link link--hover">Shipping Ploicy</a></li>
+                                    <li><a href="" class="link link--hover">Contact us</a></li>
+                                    <li><a href="" class="link link--hover">Contact us</a></li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-bootom_cr mb-0">© 2024, The Cicada Store</p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

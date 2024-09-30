@@ -12,13 +12,96 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body>
-    <!-- single product view -->
+    <!-- cdd preloader -->
+    <div id="preloader">
+        <img src="assets/image/cicada.webp" alt="loading-logo" class="preload-logo">
+    </div>
 
+    <!-- ccd header -->
+    <header class="ccd-nav">
+        <div class="container page--width">
+            <div class="ccd-nav__top">
+                <nav>
+                    <ul class="ccd-nav__items">
+                        <li class="ccd-nav__item">
+                            <a class="ccd-nav__link menu--link" data-bs-toggle="offcanvas" href="#header-menu--slider">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="menu--icon icon icon-hamburger" fill="none" viewBox="0 0 18 16">
+                                    <path
+                                        d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="index.html" class="ccd-nav__link">
+                                <img src="assets/image/logo.avif" class="ccd-nav__brand" alt="">
+                            </a>
+                        </li>
+                        <li class="ccd-nav__item">
+                            <a href="account.html" class="ccd-nav__link menu--link">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                    class="menu--icon icon icon-account" fill="none" viewBox="0 0 18 19">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="cart.html" class="ccd-nav__link menu--link position-relative">
+                                <svg class="menu--icon icon icon-cart" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z">
+                                    </path>
+                                </svg>
+                                <div class="ccd-cart__count">
+                                    <span class="ccd-cart__num">3</span>
+                                </div>
+                            </a>
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ccd-nav__bottom sm-hide">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item link link--hover" href="#">Action</a></li>
+                            <li><a class="dropdown-item link link--hover" href="#">Another action</a></li>
+                            <li><a class="dropdown-item link link--hover" href="#">Something else</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- single product view -->
     <section>
-        <main class="ccd-product">
+        <main class="ccd--product">
             <div class="container page--width">
                 <div class="row">
                     <div class="col-md-6">
@@ -118,7 +201,8 @@
                                 </div>
                             </div>
                             <div class="product__actions">
-                                <button class="btn-main product__btn">Add to Cart</button>
+                                <button class="btn-main product__btn" data-bs-toggle="modal"
+                                    data-bs-target="#viewCartModal">Add to Cart</button>
                                 <button class="btn-sec product__btn">Buy it Now</button>
                             </div>
 
@@ -266,8 +350,9 @@
 
         </main>
 
+        <!-- featured product -->
         <div class="related-prod pt-md-5">
-            <div class="container">
+            <div class="container page--width">
                 <h2 class="page--title">You may also like</h2>
                 <div class="row">
                     <div class="col-lg-3 col-6 col-md-4">
@@ -374,265 +459,111 @@
         });
     </script>
 
-    <style>
-        /* single product */
-        .ccd-product {
-            margin: 30px 0;
 
-            & .product__column-sticky {
-                position: sticky;
-                top: 3rem;
-                z-index: 2;
-            }
+    <!-- header slider menu -->
+    <div class="offcanvas offcanvas-start ccd-nav--menu" tabindex="-1" id="header-menu--slider">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title ccd-menu__title">
+                <div class="ccd-menu__brand">
+                    <img src="assets/image/cicada.webp" class="img-fluid ccd-menu__logo" width="100" height="100"
+                        alt="">
+                </div>
+                <div class="ccd-menu__head">
+                    Cicada
+                </div>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close"
+                    fill="none" viewBox="0 0 18 17">
+                    <path
+                        d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                        fill="currentColor">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="ccd-menu__items">
+                <li class="ccd-menu__item">
+                    <a href="index.html" class="ccd-menu__link active">Home</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="collections.html" class="ccd-menu__link">Shop</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="products.html" class="ccd-menu__link">All Product</a>
+                </li>
+                <li class="ccd-menu__item">
+                    <a href="product.html" class="ccd-menu__link">Product</a>
+                </li>
 
-            & .product__media-wrapper {
-                & .product__media-gallery {
-                    padding-left: 0;
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 8px;
 
-                    & .product__media-desk {
-                        width: calc(100% / 2 - 4px);
+            </ul>
+        </div>
+        <div class="offcanvas-footer">
+            <div class="ccd-menu__bottom">
+                <a href="login.html" class="ccd-menu__bottom-link menu--link">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                        class="menu--icon icon-account" fill="none" viewBox="0 0 18 19">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z"
+                            fill="currentColor">
+                        </path>
+                    </svg> Login
+                </a>
+            </div>
+        </div>
+    </div>
 
-                        & .product__media-img {
-                            border-radius: 10px;
-                            width: 100%;
-                            object-fit: cover;
-                        }
-                    }
 
-                    & .product__media-desk:first-child {
-                        width: 100%;
-                    }
+    <!-- viewCart popup Modal -->
+    <div class="modal fade" id="viewCartModal" tabindex="-1" aria-labelledby="viewCartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewCartModalLabel">
+                        <svg class="icon icon-checkmark" aria-hidden="true" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"
+                                fill="currentColor"></path>
+                        </svg> Item added to your cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                            class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                            <path
+                                d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+                                fill="currentColor">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-info">
+                        <div class="product-view">
+                            <div class="product-media">
+                                <img src="assets/image/p1.webp" class="img-fluid" alt="" loading="lazy" width="100"
+                                    height="100">
+                            </div>
+                            <div class="product-desc">
+                                <p class="product-name">
+                                    Amaterasu Itachi Designed Sweatshirt</p>
+                                <div class="product-size">Size: S</div>
+                            </div>
+                        </div>
+                        <div class="product-links">
+                            <a href="" class="btn-sec">View Cart (3)</a>
+                            <a href="" class="btn-main">Check out</a>
+                            <a href="" class="link--text text-center">Continue shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                }
 
-                & .product__media-slider {
-                    & .swiper-pagination {
-                        position: initial !important;
-                        padding: 15px 0;
-                    }
 
-                    & .swiper-pagination-bullet-active {
-                        background: #fff !important;
-                    }
-                }
-            }
-
-            & .product__info-wrapper {
-                font-size: 15px;
-                color: #b2b2b2;
-                padding-left: 20px;
-
-                & .product__brand {
-                    font-size: 10px;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    padding-bottom: 4px;
-                }
-
-                & .product__title {
-                    color: #fff;
-                    font-size: 25px;
-                    text-transform: uppercase;
-                    margin-bottom: 20px;
-                }
-
-                & .product__price {
-                    font-size: 18px;
-
-                    & .price-org {
-                        display: inline-block;
-                        text-decoration: line-through;
-                        margin-right: 10px;
-                    }
-
-                    & .price-sell {
-                        color: #fff;
-                    }
-
-                }
-
-                & .product__off {
-                    font-size: 12px;
-                    margin: 8px 0 0px;
-                }
-
-                & .product__sub-cat {
-                    margin: 1.1rem 0 10px;
-
-                }
-
-                & .product__desc {
-                    & ul {
-                        list-style: circle;
-
-                        & li {
-                            margin-bottom: 7px;
-                            color: #fff;
-                        }
-                    }
-                }
-
-                & .product__actions {
-                    margin: 2rem 0;
-                    display: flex;
-                    column-gap: 7px;
-
-                    & .product__btn {
-                        width: 50%;
-                    }
-                }
-
-            }
-
-        }
-    </style>
-    <style>
-        /* Custom Accordion Styles */
-        .accordion {
-            margin-top: 2rem;
-            margin-bottom: 0;
-            border-top: 1px solid rgb(70, 70, 70);
-            border-bottom: 1px solid rgb(70, 70, 70);
-        }
-
-        .accordion~.accordion {
-            margin-top: 0;
-            border-top: none;
-        }
-
-        .accordion summary {
-            display: flex;
-            position: relative;
-            line-height: 1;
-            padding: 1rem 0;
-        }
-
-        .accordion .summary__title {
-            display: flex;
-            flex: 1;
-        }
-
-        .accordion .icon-accordion {
-            align-self: center;
-            fill: #fff;
-            margin-right: 1rem;
-        }
-
-        .accordion summary .icon-caret {
-            position: absolute;
-            height: 12px;
-            width: 12px;
-            right: 1.5rem;
-            top: calc(50% - .2rem);
-        }
-
-        .accordion .accordion__title {
-            font-size: 15px;
-            margin: 0;
-        }
-
-        .accordion__content {
-            font-size: 15px;
-            color: #b2b2b2;
-            padding: 0 1rem;
-        }
-
-        .accordion__content .size-img {
-            margin-bottom: 1rem;
-            border-radius: 10px;
-        }
-
-        .accordion__content ul {
-            list-style: circle;
-        }
-
-        .accordion details[open]>summary .icon-caret {
-            transform: rotate(180deg);
-        }
-    </style>
-    <style>
-        /* quantity  */
-        .input-group-lg>.input-group-text {
-            background-color: transparent;
-            color: #b2b2b2;
-        }
-
-        .input-group-text {
-            border-radius: 0 !important;
-            border-color: #b2b2b2;
-            cursor: pointer;
-
-        }
-
-        .input-group .form-control {
-            border-left-color: #121212;
-            border-right-color: #121212;
-            color: #fff;
-            font-size: 15px;
-        }
-
-        .input-group .form-control:hover {
-            box-shadow: none;
-        }
-
-        .input-group .form-control:focus {
-            border-color: #b2b2b2;
-            border-left-color: #121212;
-            border-right-color: #121212;
-            box-shadow: none;
-        }
-    </style>
-    <script>
-        function changeQuantity(step) {
-            const input = document.getElementById('quantity');
-            let value = parseInt(input.value);
-            const min = parseInt(input.min);
-            const max = parseInt(input.max);
-
-            value = value + step;
-            if (value >= min && value <= max) {
-                input.value = value;
-            }
-        }
-    </script>
-    <style>
-        /* size */
-        .size-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .size-label {
-            display: inline-block;
-            background-color: transparent;
-            border: 1px solid #b2b2b2;
-            border-radius: 30px;
-            padding: 0.5rem 1.7rem;
-            font-size: 13px;
-            line-height: 1;
-            cursor: pointer;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-
-        .size-input {
-            display: none;
-        }
-
-        .size-label:hover {
-            border-color: #fff;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-        }
-
-        .size-input:checked+.size-label {
-            background-color: #fff;
-            color: #222121;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
