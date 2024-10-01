@@ -1,7 +1,7 @@
 /* header navbar  */
 .ccd-nav {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #474747;
+    padding-bottom: var(--ccd-base-size);
+    border-bottom: 1px solid var(--ccd-border-dark);
 
     & .ccd-nav__top {
         & .ccd-nav__items {
@@ -14,7 +14,7 @@
             & .ccd-nav__item {
 
                 & .ccd-nav__link {
-                    color: #fff;
+                    color: var(--ccd-color-primary);
 
                     & .icon-cart {
                         margin-top: 4px;
@@ -26,10 +26,10 @@
                         position: absolute;
                         bottom: -8px;
                         right: 3px;
-                        width: 15px;
-                        height: 15px;
+                        width: var(--ccd-base-size);
+                        height: var(--ccd-base-size);
                         border-radius: 50%;
-                        background-color: #fff;
+                        background-color: var(--ccd-color-primary);
 
                         & .ccd-cart__num {
                             display: block;
@@ -37,7 +37,7 @@
                             font-size: 12px;
                             font-weight: bold;
                             text-align: center;
-                            line-height: 15px;
+                            line-height: var(--ccd-base-size);
                         }
                     }
                 }
@@ -49,7 +49,7 @@
 
         & .navbar-nav {
             font-size: 14px;
-            color: #b2b2b2;
+            color: var(--ccd-color-text);
             justify-content: center;
             flex-direction: row;
             column-gap: 25px;
@@ -89,7 +89,7 @@
     & .ccd-banner__mob {
         & .swiper-pagination {
             position: initial !important;
-            padding: 15px 0;
+            padding: var(--ccd-base-size) 0;
         }
 
         & .swiper-pagination-bullet {
@@ -97,7 +97,7 @@
         }
 
         & .swiper-pagination-bullet-active {
-            background: #fff !important;
+            background: var(--ccd-color-primary) !important;
         }
 
         .product__media-pic {
@@ -144,7 +144,7 @@
     & .custom-acc__desc {
         margin: 1rem 0 40px 0;
         text-align: center;
-        color: #b2b2b2;
+        color: var(--ccd-color-text);
     }
 
     & .custom-acc__page {
@@ -166,7 +166,7 @@
         .ccd-menu__brand {
             width: 50px;
             height: 50px;
-            background-color: #fff;
+            background-color: var(--ccd-color-primary);
             border-radius: 50%;
 
             & .ccd-menu__logo {
@@ -178,7 +178,7 @@
         }
 
         & .ccd-menu__head {
-            color: #fff;
+            color: var(--ccd-color-primary);
             font-size: 1rem;
         }
     }
@@ -192,7 +192,7 @@
                 & .ccd-menu__link {
                     display: block;
                     padding: 12px 30px;
-                    color: #fff;
+                    color: var(--ccd-color-primary);
                     font-size: 1rem;
                     transition: all 0.2s ease;
 
@@ -227,7 +227,7 @@
         height: 250px;
         overflow: hidden;
         position: relative;
-        background-color: #fff;
+        background-color: var(--ccd-color-primary);
         border-radius: 10px;
         scale: initial;
         rotate: initial;
@@ -249,7 +249,7 @@
         }
 
         & .ccd-card__title a {
-            color: #fff !important;
+            color: var(--ccd-color-primary) !important;
         }
 
         & .ccd-card__info {
@@ -257,14 +257,14 @@
 
             & .ccd-card__org {
                 display: inline-block;
-                color: #b2b2b2;
+                color: var(--ccd-color-text);
                 text-decoration: line-through;
                 padding-right: 8px;
                 font-size: 14px;
             }
 
             & .ccd-card__sell {
-                font-size: 15px;
+                font-size: var(--ccd-base-size);
 
             }
         }
@@ -297,7 +297,7 @@
     }
 
     & .swiper-pagination-bullet-active {
-        background: #fff !important;
+        background: var(--ccd-color-primary) !important;
     }
 }
 
@@ -316,7 +316,7 @@
 
         .link {
             font-size: 17px;
-            color: #fff !important;
+            color: var(--ccd-color-primary) !important;
         }
 
         .icon-arrow {
@@ -346,8 +346,8 @@
 /* show all products */
 .ccd--products {
     .products__filters {
-        font-size: 15px;
-        color: #b2b2b2;
+        font-size: var(--ccd-base-size);
+        color: var(--ccd-color-text);
         margin-bottom: 30px;
 
         & .products__filters-lt {
@@ -400,18 +400,18 @@
         & .product__media-slider {
             & .swiper-pagination {
                 position: initial !important;
-                padding: 15px 0;
+                padding: var(--ccd-base-size) 0;
             }
 
             & .swiper-pagination-bullet-active {
-                background: #fff !important;
+                background: var(--ccd-color-primary) !important;
             }
         }
     }
 
     & .product__info-wrapper {
-        font-size: 15px;
-        color: #b2b2b2;
+        font-size: var(--ccd-base-size);
+        color: var(--ccd-color-text);
         padding-left: 20px;
 
         & .product__brand {
@@ -423,7 +423,7 @@
         }
 
         & .product__title {
-            color: #fff;
+            color: var(--ccd-color-primary);
             font-size: 25px;
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -439,7 +439,7 @@
             }
 
             & .price-sell {
-                color: #fff;
+                color: var(--ccd-color-primary);
             }
 
         }
@@ -460,7 +460,7 @@
 
                 & li {
                     margin-bottom: 7px;
-                    color: #fff;
+                    color: var(--ccd-color-primary);
                 }
             }
         }
@@ -503,11 +503,11 @@
         & .cart-table__head th {
             padding-left: 1rem;
             font-size: 10px;
-            color: #b2b2b2;
+            color: var(--ccd-color-text);
             text-transform: uppercase;
             text-align: left;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgb(41, 41, 41);
+            padding-bottom: var(--ccd-base-size);
+            border-bottom: 1px solid var(--ccd-border-light);
 
         }
 
@@ -517,7 +517,7 @@
                 vertical-align: top;
                 padding: 30px 0;
                 padding-left: 1rem;
-                border-bottom: 1px solid rgb(41, 41, 41);
+                border-bottom: 1px solid var(--ccd-border-light);
             }
 
             & .cart-item__media {
@@ -533,11 +533,11 @@
             }
 
             & .cart-item__info {
-                color: #b2b2b2;
+                color: var(--ccd-color-text);
                 font-size: 14px;
 
                 & .cart-item__name .link {
-                    color: #fff !important;
+                    color: var(--ccd-color-primary) !important;
                 }
 
                 & .cart-item__price {
@@ -569,7 +569,7 @@
             align-items: center;
 
             & .cart__totals-txt {
-                color: #b2b2b2;
+                color: var(--ccd-color-text);
                 font-size: 1rem;
                 margin-right: 13px;
                 margin-bottom: 0;
@@ -600,7 +600,7 @@
         list-style: none;
 
         & .order__list {
-            border-bottom: 1px dotted rgb(44, 44, 44);
+            border-bottom: 1px dotted var(--ccd-border-light);
             padding-bottom: 12px;
             margin-bottom: 12px;
 
@@ -619,7 +619,7 @@
                     display: flex;
                     flex-direction: column;
                     row-gap: 4px;
-                    color: #b2b2b2;
+                    color: var(--ccd-color-text);
                     font-size: 14px;
                 }
 
@@ -637,7 +637,7 @@
 /* view orders */
 .ccd-order--view {
     & .ccd-ov-wrap {
-        color: #b2b2b2;
+        color: var(--ccd-color-text);
         font-size: 14px;
 
         & .ccd-ov-head {
@@ -648,11 +648,11 @@
 
         & .ccd-ov__head {
             font-size: 13px;
-            color: #fff;
+            color: var(--ccd-color-primary);
             text-transform: uppercase;
             text-decoration: underline;
             text-underline-offset: 0.3rem;
-            margin-bottom: 15px;
+            margin-bottom: var(--ccd-base-size);
 
         }
 
@@ -666,7 +666,7 @@
             & .ccd-ov__summary-info .row:last-child p {
                 font-size: 16px;
                 font-weight: 700;
-                color: #fff;
+                color: var(--ccd-color-primary);
             }
 
             & .order__list-link {
@@ -683,28 +683,20 @@
 
 /* --- footer --- */
 .ccd-footer {
-    & .footer-top {
-        padding-bottom: 10px;
-
-        & .footer-top__desc {
-            color: #b2b2b2;
-        }
-    }
-
-    .footer-base {
+    & .footer-base {
         font-size: 14px;
-        color: #b2b2b2;
+        color: var(--ccd-color-text);
 
         & .footer-block {
-            padding: 30px 0 !important;
-            border-top: 1px solid #3a3a3a;
-            border-bottom: 1px solid #3a3a3a;
+            padding: 30px 0;
+            border-top: 1px solid var(--ccd-border-dark);
+            border-bottom: 1px solid var(--ccd-border-dark);
 
             & .footer-block_head {
                 font-size: 16px;
                 text-transform: capitalize;
-                color: #fff;
-                margin-bottom: 15px;
+                color: var(--ccd-color-primary);
+                margin-bottom: var(--ccd-base-size);
             }
 
             & .footer-block_content {
@@ -726,6 +718,12 @@
             text-align: center;
             font-size: 12px;
             letter-spacing: 1px;
+        }
+    }
+
+    @media (min-width:992px) {
+        .footer-base .footer-block {
+            padding: 50px 0;
         }
     }
 }

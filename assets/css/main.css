@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
 
+:root{
+    --ccd-color-bg:#121212;
+    --ccd-color-primary:#ffffff;
+    --ccd-color-text:#b2b2b2;
+    --ccd-border-light:rgb(44, 44, 44);
+    --ccd-border-dark:rgb(71, 71, 71);
+    --ccd-body-family:"Assistant", sans-serif;
+    --ccd-base-size:15px;
+
+}
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-size: 15px;
-    background-color: #121212 !important;
-    color: #fff !important;
-    font-family: "Assistant", sans-serif !important;
+    font-size: var(--ccd-base-size);
+    background-color: var(--ccd-color-bg) !important;
+    color: var(--ccd-color-primary) !important;
+    font-family: var(--ccd-body-family) !important;
     font-optical-sizing: auto;
     letter-spacing: 0.06rem;
 }
@@ -20,7 +30,7 @@ body {
 
 @media only screen and (max-width:768px) {
     .container {
-        padding: 0px 16px !important;
+        padding: 0px var(--ccd-base-size) !important;
     }
 }
 
@@ -59,7 +69,7 @@ section {
 
 a {
     text-decoration: none !important;
-    color: #fff;
+    color: var(--ccd-color-primary);
 }
 
 ul {
@@ -77,14 +87,19 @@ ul {
 }
 
 @media (min-width:769px) {
-
     .lg-hide {
         display: none !important;
     }
 }
 
+@media (max-width:576px){
+    .products--row>*{
+        padding: 0 3px;
+    }
+}
+
 .link {
-    color: #b2b2b2 !important;
+    color: var(--ccd-color-text) !important;
     font-size: 14px;
     transition: all 0.3s ease;
 }
@@ -92,19 +107,19 @@ ul {
 .link--hover:hover {
     text-decoration: underline !important;
     text-underline-offset: .3rem;
-    color: #fff !important;
+    color: var(--ccd-color-primary) !important;
 }
 
 .link--text {
     display: inline-block;
-    color: #b2b2b2 !important;
+    color: var(--ccd-color-text) !important;
     text-decoration: underline !important;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 0.1rem;
     transition: text-decoration-thickness ease .2s;
 
     &:hover {
-        color: #fff !important;
+        color: var(--ccd-color-primary) !important;
         text-decoration-thickness: 0.2rem !important;
     }
 }
@@ -112,8 +127,8 @@ ul {
 /* common */
 .form-control {
     border-radius: 0;
-    border-color: #b2b2b2;
-    color: #b2b2b2;
+    border-color: var(--ccd-color-text);
+    color: var(--ccd-color-text);
     background-color: transparent;
 }
 
@@ -123,20 +138,20 @@ ul {
 }
 
 .form-control:focus {
-    border-color: #fff;
-    box-shadow: 0 0 0 1px #fff;
+    border-color: var(--ccd-color-primary);
+    box-shadow: 0 0 0 1px var(--ccd-color-primary);
     background-color: transparent;
-    color: #fff;
+    color: var(--ccd-color-primary);
 }
 
 label {
-    color: #b2b2b2;
-    font-size: 15px;
+    color: var(--ccd-color-text);
+    font-size: var(--ccd-base-size);
     letter-spacing: 1px;
 }
 
 .form-floating>.form-control:focus~label {
-    color: #b2b2b2;
+    color: var(--ccd-color-text);
     font-size: 13px;
 }
 
@@ -152,18 +167,18 @@ label {
 
 .form-floating>.form-control:not(:placeholder-shown)~label,
 .form-floating>.form-select~label {
-    color: #b2b2b2;
+    color: var(--ccd-color-text);
     font-size: 13px;
 }
 
 /* offcanvas */
 .offcanvas {
-    font-size: 15px;
-    background-color: #121212 !important;
+    font-size: var(--ccd-base-size);
+    background-color: var(--ccd-color-bg) !important;
 }
 
 .offcanvas-header {
-    border-bottom: 1px solid rgb(44, 44, 44);
+    border-bottom: 1px solid var(--ccd-border-light);
 }
 
 .offcanvas-header .btn-close {
@@ -172,7 +187,7 @@ label {
 }
 
 .offcanvas-header .btn-close svg path {
-    fill: rgb(255, 255, 255);
+    fill: var(--ccd-color-primary);
 }
 
 .btn-close {
@@ -181,29 +196,28 @@ label {
 }
 
 .offcanvas-title {
-    font-size: 15px;
+    font-size: var(--ccd-base-size);
     text-transform: capitalize;
 
 }
 
 .offcanvas-title span {
     font-size: 13px;
-    color: #b2b2b2;
+    color: var(--ccd-color-text);
 }
 
 .offcanvas-body__head {
-    font-size: 15px;
+    font-size: var(--ccd-base-size);
     margin-bottom: 10px;
 }
 
 .form-check {
-    font-size: 14px;
     margin-bottom: 10px;
-    color: #b2b2b2;
+    color: var(--ccd-color-text);
 }
 
 .offcanvas-footer {
-    border-top: 1px solid rgb(44, 44, 44);
+    border-top: 1px var(--ccd-border-light);
     padding: 1.5rem 1rem;
 }
 
@@ -225,13 +239,13 @@ label {
     box-shadow: 0 0 0 .25rem rgb(0 0 0 / 25%);
 }
 
-/* btn */
+/* btn main */
 
 .btn-main {
     align-items: center;
     background-clip: padding-box;
-    background-color: #fff;
-    border: 1px solid #fff;
+    background-color: var(--ccd-color-primary);
+    border: 1px solid var(--ccd-color-primary);
     border-radius: 0;
     box-shadow: rgba(236, 236, 236, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
@@ -239,7 +253,7 @@ label {
     cursor: pointer;
     display: inline-flex;
     font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: var(--ccd-base-size);
     font-weight: 500;
     justify-content: center;
     line-height: 1.25;
@@ -258,7 +272,7 @@ label {
 
 .btn-main:hover,
 .btn-main:focus {
-    background-color: #ffffffd2;
+    background-color: #ffffd2;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
@@ -277,14 +291,14 @@ label {
     align-items: center;
     background-clip: padding-box;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid var(--ccd-color-primary);
     border-radius: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--ccd-color-primary);
     cursor: pointer;
     display: inline-flex;
     font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: var(--ccd-base-size);
     font-weight: 500;
     justify-content: center;
     line-height: 1.25;
@@ -316,12 +330,12 @@ label {
 
 /* dropdown */
 .dropdown-menu {
-    background-color: #121212;
-    border: 1px solid #474747;
+    background-color: var(--ccd-color-bg);
+    border: 1px solid var(--ccd-border-dark);
     border-radius: 0;
 
     & .dropdown-item {
-        color: #fff;
+        color: var(--ccd-color-primary);
         padding: 5px 20px;
 
         &:hover {
@@ -339,8 +353,8 @@ label {
 .accordion {
     margin-top: 2rem;
     margin-bottom: 0;
-    border-top: 1px solid rgb(70, 70, 70);
-    border-bottom: 1px solid rgb(70, 70, 70);
+    border-top: 1px solid var(--ccd-border-dark);
+    border-bottom: 1px solid var(--ccd-border-dark);
 }
 
 .accordion~.accordion {
@@ -363,9 +377,9 @@ label {
 
 .accordion .icon-accordion {
     align-self: center;
-    fill: #fff;
+    fill: var(--ccd-color-primary);
     margin-right: 1rem;
-    color: #fff;
+    color: var(--ccd-color-primary);
     font-size: 1rem;
 }
 
@@ -378,13 +392,13 @@ label {
 }
 
 .accordion .accordion__title {
-    font-size: 15px;
+    font-size: var(--ccd-base-size);
     margin: 0;
 }
 
 .accordion__content {
-    font-size: 15px;
-    color: #b2b2b2;
+    font-size: var(--ccd-base-size);
+    color: var(--ccd-color-text);
     padding: 0 1rem;
 }
 
@@ -404,21 +418,21 @@ label {
 /* quantity box */
 .input-group-lg>.input-group-text {
     background-color: transparent;
-    color: #b2b2b2;
+    color: var(--ccd-color-text);
 }
 
 .input-group-text {
     border-radius: 0 !important;
-    border-color: #b2b2b2;
+    border-color: var(--ccd-color-text);
     cursor: pointer;
 
 }
 
 .input-group .form-control {
-    border-left-color: #121212;
-    border-right-color: #121212;
-    color: #fff;
-    font-size: 15px;
+    border-left-color: var(--ccd-color-bg);
+    border-right-color: var(--ccd-color-bg);
+    color: var(--ccd-color-primary);
+    font-size: var(--ccd-base-size);
 }
 
 .input-group .form-control:hover {
@@ -426,9 +440,9 @@ label {
 }
 
 .input-group .form-control:focus {
-    border-color: #b2b2b2;
-    border-left-color: #121212;
-    border-right-color: #121212;
+    border-color: var(--ccd-color-text);
+    border-left-color: var(--ccd-color-bg);
+    border-right-color: var(--ccd-color-bg);
     box-shadow: none;
 }
 
@@ -443,7 +457,7 @@ label {
 .size-label {
     display: inline-block;
     background-color: transparent;
-    border: 1px solid #b2b2b2;
+    border: 1px solid var(--ccd-color-text);
     border-radius: 30px;
     padding: 0.5rem 1.7rem;
     font-size: 13px;
@@ -457,22 +471,22 @@ label {
 }
 
 .size-label:hover {
-    border-color: #fff;
+    border-color: var(--ccd-color-primary);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .size-input:checked+.size-label {
-    background-color: #fff;
+    background-color: var(--ccd-color-primary);
     color: #222121;
 }
 
 /* modal css */
 .modal {
     .modal-content {
-        background-color: #121212;
-        /* border-color: #b2b2b2; */
+        background-color: var(--ccd-color-bg);
+        /* border-color: var(--ccd-color-text); */
         border-radius: 4px;
-        color: #fff;
+        color: var(--ccd-color-primary);
         box-shadow: 0 0 0 1px rgba(233, 233, 233, 0.171);
     }
 
@@ -496,7 +510,7 @@ label {
         }
 
         .btn-close:hover .icon-close path {
-            stroke: #b2b2b2;
+            stroke: var(--ccd-color-text);
             stroke-width: 3px;
         }
 
@@ -527,12 +541,12 @@ label {
                     padding-left: 20px;
 
                     & .product-name {
-                        font-size: 15px;
+                        font-size: var(--ccd-base-size);
                         margin-bottom: 8px;
                     }
 
                     & .product-size {
-                        color: #b2b2b2;
+                        color: var(--ccd-color-text);
                         font-size: 14px;
                     }
                 }
@@ -542,7 +556,7 @@ label {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                row-gap: 15px;
+                row-gap: var(--ccd-base-size);
             }
         }
     }
@@ -559,7 +573,7 @@ label {
         position: relative;
         width: 130px;
         height: 130px;
-        background-color: #fff;
+        background-color: var(--ccd-color-primary);
         border-radius: 50%;
         margin: auto;
         overflow: hidden;

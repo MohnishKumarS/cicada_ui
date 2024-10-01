@@ -8,8 +8,11 @@ window.onload = function () {
     }, 1000);
 };
 
-function changeQuantity(step) {
-    const input = document.getElementById('quantity');
+// changing product Qty 
+function changeQuantity(element,step) {
+    
+    const input = element.parentElement.querySelector('.js--quantity');
+    
     let value = parseInt(input.value);
     const min = parseInt(input.min);
     const max = parseInt(input.max);
@@ -18,4 +21,6 @@ function changeQuantity(step) {
     if (value >= min && value <= max) {
         input.value = value;
     }
+    console.log(input.value);
+    
 }

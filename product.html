@@ -193,10 +193,10 @@
                                 <p class="product__sub-cat">Quantity*</p>
                                 <div class="product__quatity">
                                     <div class="input-group input-group-lg" style="width: 140px;">
-                                        <span class="input-group-text" onclick="changeQuantity(-1)">-</span>
-                                        <input type="text" class="form-control text-center" id="quantity" value="1"
+                                        <span class="input-group-text" onclick="changeQuantity(this,-1)">-</span>
+                                        <input type="text" class="form-control text-center js--quantity" value="1"
                                             max="10" min="1" readonly>
-                                        <span class="input-group-text" onclick="changeQuantity(1)">+</span>
+                                        <span class="input-group-text" onclick="changeQuantity(this,1)">+</span>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +354,7 @@
         <div class="related-prod pt-md-5">
             <div class="container page--width">
                 <h2 class="page--title">You may also like</h2>
-                <div class="row">
+                <div class="row products--row">
                     <div class="col-lg-3 col-6 col-md-4">
                         <div class="ccd-card">
                             <div class="ccd-card__media">
@@ -448,12 +448,6 @@
                     "spaceBetween": 10
                 },
 
-                // "1200": {
-                //     "slidesPerView": 4,
-                //     "slidesPerGroup": 1,
-                //     "spaceBetween": 60,
-                //     "pagination": false
-                // }
             },
             grabCursor: true,
         });
